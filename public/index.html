@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for my racer</title>
+
+    <!--links-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bg.css" />
+  </head>
+  <body
+    class="bg-grid-pattern flex flex-col items-center justify-center h-screen font-mono"
+  >
+    <div class="flex flex-col items-center justify-start h-screen mt-32">
+      <p class="text-3xl font-semibold mt-56">Wake the fuck up!!</p>
+      <img src="foru.png" alt="mimi" class="w-72 h-auto mt-3" />
+      <p class="text-3xl font-semibold mt-5">Happy Monthsarry, my Lil Racer!</p>
+    </div>
+    <div class="flex flex-col items-center justify-start h-screen">
+      <img src="heartbubble.gif" alt="heartbubble" class="w-36 h-auto mt-20" />
+      <p class="text-2xl mb-10">
+        For our date, you are obligated to watch a movie with me
+      </p>
+      <img src="movieposter.jpg" alt="movieposter" class="w-44 h-auto mb-10" />
+      <!--radiobutton-->
+      <div class="flex flex-col items-center">
+        <div class="flex space-x-6 mb-4">
+          <label class="flex items-center space-x-1">
+            <input
+              type="radio"
+              name="response"
+              value="ok"
+              class="accent-pink-500"
+            />
+            <span>ok sure</span>
+          </label>
+          <label class="flex items-center space-x-1">
+            <input
+              type="radio"
+              name="response"
+              value="nah"
+              class="accent-pink-500"
+            />
+            <span>hell nah!!!</span>
+          </label>
+        </div>
+        <button
+          class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition mb-5"
+        >
+          Choose!
+        </button>
+      </div>
+    </div>
+    <!-- Hidden image & text section -->
+    <div id="surprise" class="hidden flex-col items-center mt-6">
+      <img src="catlike.png" alt="catlike" class="w-40 h-auto mb-3" />
+      <p class="text-xl font-bold text-pink-700 text-center mb-5">
+        lets fucking go and open ur laptop now!
+      </p>
+    </div>
+  </body>
+
+  <!--javascript-->
+  <script>
+    const button = document.querySelector("button");
+    const surprise = document.getElementById("surprise");
+
+    button.addEventListener("click", () => {
+      // Show the hidden element
+      surprise.classList.remove("hidden");
+      surprise.classList.add("flex");
+
+      // Smooth scroll to it
+      setTimeout(() => {
+        surprise.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100); // slight delay to make sure it's rendered before scrolling
+    });
+  </script>
+</html>

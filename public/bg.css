@@ -1,0 +1,13 @@
+.bg-grid-pattern {
+  background-color: #fff;
+  background-image: linear-gradient(
+      #fdf2f8 1.9000000000000001px,
+      transparent 1.9000000000000001px
+    ),
+    linear-gradient(
+      to right,
+      #fdf2f8 1.9000000000000001px,
+      #fff 1.9000000000000001px
+    );
+  background-size: 38px 38px;
+}
